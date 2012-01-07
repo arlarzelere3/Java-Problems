@@ -1,14 +1,14 @@
 package toDoList;
 
-import java.awt.List;
 import java.util.Date;
+import java.util.HashSet;
 
 public class Task {
 	private String title = "Untitled";
 	private Date dueDate = new Date();
 	private boolean completed = false;
 	private String notes = "";
-	private List subTasks = new List();
+	private HashSet<Task> subTasks = new HashSet<Task>();
 	
 	/**
 	 * 
@@ -65,19 +65,6 @@ public class Task {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-	/**
-	 * @return the subTasks
-	 */
-	public List getSubTasks() {
-		return subTasks;
-	}
-
-	/**
-	 * @param subTasks the subTasks to set
-	 */
-	public void setSubTasks(List subTasks) {
-		this.subTasks = subTasks;
-	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -93,5 +80,9 @@ public class Task {
 		output.append(title + " " + dueDate.toString() + " " + notes);
 		
 		return output.toString();
+	}
+
+	public void addSubTask(Task newTask) {
+		subTasks.add(newTask);
 	}
 }
