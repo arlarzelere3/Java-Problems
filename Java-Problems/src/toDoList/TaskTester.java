@@ -4,6 +4,9 @@
 package toDoList;
 
 import static org.junit.Assert.*;
+
+import java.awt.List;
+
 import org.junit.Test;
 
 /**
@@ -20,18 +23,18 @@ public class TaskTester {
 		assertNotNull(newTask.getDueDate());
 		assertFalse(newTask.isCompleted());
 		assertEquals(newTask.getNotes(), "");
-		assertNull(newTask.getSubTask());
+		assertNull(newTask.getSubTasks());
 	}
 
 	@Test
 	public void testSubTask() {
 		Task newTask = new Task();
 		
-		assertNull(newTask.getSubTask());
+		assertNull(newTask.getSubTasks());
 		
-		newTask.setSubTask(new Task());
+		newTask.setSubTasks(new List());
 		
-		assertNotNull(newTask.getSubTask());
+		assertNotNull(newTask.getSubTasks());
 	}
 	
 	@Test
