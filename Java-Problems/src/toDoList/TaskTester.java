@@ -23,7 +23,7 @@ public class TaskTester {
 		assertNotNull(newTask.getDueDate());
 		assertFalse(newTask.isCompleted());
 		assertEquals(newTask.getNotes(), "");
-		assertNull(newTask.getSubTasks());
+		assertTrue(newTask.getSubTasks().getItemCount() == 0);
 	}
 
 	@Test
