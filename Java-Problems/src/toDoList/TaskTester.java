@@ -24,18 +24,19 @@ public class TaskTester {
 		assertNotNull(newTask.getDueDate());
 		assertFalse(newTask.isCompleted());
 		assertEquals(newTask.getNotes(), "");
-		assertEquals(newTask.getSubTasks().getItemCount(), 0);
+		assertTrue(newTask.getSubTasks().isEmpty());
 	}
 
 	@Test
 	public void testSubTask() {
 		Task newTask = new Task();
 		
-		assertEquals(newTask.getSubTasks().getItemCount(), 0);
+		assertTrue(newTask.getSubTasks().isEmpty());
 		
 		newTask.addSubTask(new Task());
 		
-		assertEquals(newTask.getSubTasks().getItemCount(), 1);
+		assertFalse(newTask.getSubTasks().isEmpty());
+		
 	}
 	
 	@Test

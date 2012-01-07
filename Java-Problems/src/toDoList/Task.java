@@ -66,6 +66,20 @@ public class Task {
 		this.notes = notes;
 	}
 
+	/**
+	 * @return the subTasks
+	 */
+	public HashSet<Task> getSubTasks() {
+		return subTasks;
+	}
+
+	/**
+	 * @param subTasks the subTasks to set
+	 */
+	public void setSubTasks(HashSet<Task> subTasks) {
+		this.subTasks = subTasks;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
