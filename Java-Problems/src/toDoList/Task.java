@@ -1,5 +1,6 @@
 package toDoList;
 
+import java.awt.List;
 import java.util.Date;
 
 public class Task {
@@ -7,7 +8,7 @@ public class Task {
 	private Date dueDate = new Date();
 	private boolean completed = false;
 	private String notes = "";
-	private Task subTask = null;
+	private List subTasks = new List();
 	
 	/**
 	 * 
@@ -65,17 +66,19 @@ public class Task {
 		this.notes = notes;
 	}
 	/**
-	 * @return the subTask
+	 * @return the subTasks
 	 */
-	public Task getSubTask() {
-		return subTask;
+	public List getSubTasks() {
+		return subTasks;
 	}
+
 	/**
-	 * @param subTask the subTask to set
+	 * @param subTasks the subTasks to set
 	 */
-	public void setSubTask(Task subTask) {
-		this.subTask = subTask;
+	public void setSubTasks(List subTasks) {
+		this.subTasks = subTasks;
 	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
